@@ -10,7 +10,8 @@
 		"railway":"",
 		"socket.io":"",
 		"forever":"",
-		"vows":""
+		"vows":"",
+		"redis":""
 	},
   "devDependencies": {},
   "optionalDependencies": {},
