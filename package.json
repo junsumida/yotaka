@@ -6,7 +6,10 @@
     "type": "git",
     "url": "git://github.com/junsumida/yotaka.git"
   },
-  "dependencies": {},
+  "dependencies": {
+		"express":"",
+		"socket.io":"",
+	},
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
