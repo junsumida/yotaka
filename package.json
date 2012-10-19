@@ -11,7 +11,9 @@
 		"socket.io":"",
 		"forever":"",
 		"vows":"",
-		"redis":""
+		"redis":"",
+		"express":"",
+		"jugglingdb":""
 	},
   "devDependencies": {},
   "optionalDependencies": {},
