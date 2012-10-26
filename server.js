@@ -20,11 +20,5 @@ if (!module.parent) {
 
     console.log("Railway server listening on port %d within %s environment", port, app.settings.env);
 
-    io.sockets.on('connection', function(){
-      console.log("connection opened");
-      socket.on('hoge', function(data){
-        console.log("dareka kitayo");
-      });
-    });
-}
+    }
 
