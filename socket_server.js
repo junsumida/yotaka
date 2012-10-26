@@ -14,6 +14,9 @@ rclient.zrange('hage', 0, -1, function(err, members){
 
 io.sockets.on('connection', function(){
   console.log("connection opened");
+  socket.emit('connect', function(data){
+    socket.volatile.emit({msg:"hoge"});
+  });
   socket.on('hoge', function(data){
       console.log("dareka kitayo");
   });
