@@ -1,20 +1,20 @@
-/*global require:true*/
-#!/usr/bin/env node
+/*global require:true, module:true, process:true */
+// #!/usr/bin/env node
 
 var app = module.exports = require('railway').createServer();
 
 if (!module.parent) {
-    var port = process.env.PORT || 3000
+    var port = process.env.PORT || 3000;
     app.listen(port);
     var io = require('socket.io').listen(app.listen(port));
     var redis = require('redis');
     var rcli  = redis.createClient();
 
-    rclient.on("ready", function(){
+    rcli.on("ready", function(){
       console.log("rclient is ready.");
     });
 
-    rclient.zrange('hage', 0, -1, function(err, mems){
+    rcli.zrange('hage', 0, -1, function(err, mems){
       console.log(mems);
     });
 
