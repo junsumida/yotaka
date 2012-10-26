@@ -1,4 +1,4 @@
-/*global require:true, module:true, process:true */
+/*global require:true, module:true, process:true, socket */
 // #!/usr/bin/env node
 
 var app = module.exports = require('railway').createServer();
@@ -19,5 +19,12 @@ if (!module.parent) {
     });
 
     console.log("Railway server listening on port %d within %s environment", port, app.settings.env);
+
+    io.sockets.on('connection', function(){
+      console.log("connection opened");
+      socket.on('hoge', function(data){
+        console.log("dareka kitayo");
+      });
+    });
 }
 
